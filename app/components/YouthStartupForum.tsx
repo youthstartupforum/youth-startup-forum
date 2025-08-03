@@ -42,7 +42,7 @@ export default function YouthStartupForum() {
         {/* Left Side - YSF Support */}
         <div className="flex items-center gap-2 sm:gap-3">
           <img
-            src="/YSFMain.svg"
+            src="/YSFshort.svg"
             alt="YSF"
             className="h-6 w-auto"
           />
