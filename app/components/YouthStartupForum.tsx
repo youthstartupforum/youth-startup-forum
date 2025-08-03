@@ -41,9 +41,11 @@ export default function YouthStartupForum() {
         
         {/* Left Side - YSF Support */}
         <div className="flex items-center gap-2 sm:gap-3">
-          <div className="bg-black text-white px-2 py-1 text-xs font-bold">
-            YSF
-          </div>
+          <img
+            src="/YSFMain.svg"
+            alt="YSF"
+            className="h-6 w-auto"
+          />
           <span className="text-gray-500 text-xs sm:text-sm">Support</span>
         </div>
         
