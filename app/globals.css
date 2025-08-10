@@ -1,14 +1,15 @@
+/* BDO Grotesk - 모든 weight */
 @font-face {
   font-family: 'BDO Grotesk';
-  src: url('/fonts/bdo-grotesk-font-family-1754195517-0/BDOGrotesk-Regular-BF648a656fd543a.ttf') format('truetype');
-  font-weight: 400;
+  src: url('/fonts/bdo-grotesk-font-family-1754195517-0/BDOGrotesk-Light-BF648a656f...ttf') format('truetype');
+  font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'BDO Grotesk';
-  src: url('/fonts/bdo-grotesk-font-family-1754195517-0/BDOGrotesk-Bold-BF648a656f312c4.ttf') format('truetype');
-  font-weight: 700;
+  src: url('/fonts/bdo-grotesk-font-family-1754195517-0/BDOGrotesk-Regular-BF648a656fd543a.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -19,6 +20,64 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'BDO Grotesk';
+  src: url('/fonts/bdo-grotesk-font-family-1754195517-0/BDOGrotesk-Bold-BF648a656f312c4.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Wanted Sans - 모든 weight */
+@font-face {
+  font-family: 'Wanted Sans';
+  src: url('/WantedSans-1.0.3/ttf/WantedSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Wanted Sans';
+  src: url('/WantedSans-1.0.3/ttf/WantedSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Wanted Sans';
+  src: url('/WantedSans-1.0.3/ttf/WantedSans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Wanted Sans';
+  src: url('/WantedSans-1.0.3/ttf/WantedSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Wanted Sans';
+  src: url('/WantedSans-1.0.3/ttf/WantedSans-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Wanted Sans';
+  src: url('/WantedSans-1.0.3/ttf/WantedSans-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* 또는 Variable 폰트 사용 (모든 weight 포함) */
+@font-face {
+  font-family: 'Wanted Sans Variable';
+  src: url('/WantedSans-1.0.3/variable/WantedSansVariable.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
 body {
-  font-family: 'BDO Grotesk', system-ui, sans-serif;
+  font-family: 'Wanted Sans', 'BDO Grotesk', system-ui, sans-serif;
 }

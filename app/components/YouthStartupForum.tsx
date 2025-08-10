@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function YouthStartupForum() {
   return (
-    <div className="min-h-screen bg-white flex flex-col font-['BDO_Grotesk']">
+    <div className="min-h-screen bg-white flex flex-col" style={{ fontFamily: "'Wanted Sans', 'BDO Grotesk', system-ui, sans-serif" }}>
       {/* Main Content Container */}
       <div 
         className="flex-1 flex flex-col items-center px-4 sm:px-8 lg:px-16"
@@ -19,55 +19,52 @@ export default function YouthStartupForum() {
         <img 
           src="/YSFMain.svg" 
           alt="Youth Startup Forum" 
-          className="h-16 sm:h-20 md:h-24 lg:h-28 xl:h-32 w-auto mb-4"
+          className="h-12 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-auto mb-6"
         />
         
         {/* Navigation Buttons */}
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-sm sm:max-w-md justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 w-full max-w-xs sm:max-w-md md:max-w-lg justify-center items-center mb-6">
           <button 
-            className="bg-black text-white px-6 py-3 text-sm font-medium rounded hover:bg-gray-800 transition-colors w-full sm:w-auto"
+            className="bg-black text-white px-4 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 text-sm sm:text-base md:text-lg font-medium rounded-md sm:rounded-lg hover:bg-gray-800 hover:scale-105 transition-all duration-200 w-full sm:w-auto shadow-md hover:shadow-lg"
             style={{
               backgroundColor: '#000000',
               color: '#ffffff',
-              padding: '12px 24px',
               borderRadius: '6px',
               border: 'none',
               cursor: 'pointer',
-              fontSize: '14px',
               fontWeight: '500'
             }}
           >
             Join us
           </button>
-          <button 
-            className="bg-gray-100 text-black px-6 py-3 text-sm font-medium rounded hover:bg-gray-200 transition-colors w-full sm:w-auto"
+          <a
+            href="https://youthstartupforum.com/members"
+            className="bg-gray-100 text-black px-4 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 text-sm sm:text-base md:text-lg font-medium rounded-md sm:rounded-lg hover:bg-gray-200 hover:scale-105 transition-all duration-200 w-full sm:w-auto shadow-md hover:shadow-lg inline-block text-center no-underline"
             style={{
               backgroundColor: '#f3f4f6',
               color: '#000000',
-              padding: '12px 24px',
               borderRadius: '6px',
-              border: 'none',
               cursor: 'pointer',
-              fontSize: '14px',
-              fontWeight: '500'
+              fontWeight: '500',
+              textDecoration: 'none'
             }}
           >
             Members
-          </button>
+          </a>
         </div>
         
         {/* Vision Text */}
-        <div className="max-w-3xl text-left text-gray-800 leading-loose mt-12">
-          <p className="mb-12" style={{ fontSize: '24px', lineHeight: '1.8' }}>
+        <div className="max-w-3xl text-left text-gray-800 leading-relaxed">
+          <p className="mb-6" style={{ fontSize: '16px', lineHeight: '1.6' }}>
             우리는 느슨하지만 끈끈한 네트워크를 통해 전국의 학생 창업가들이
             프로젝트를 공유하고, 정보를 교류하며,
             창업 여정의 중요한 마일스톤을 함께 만들어갑니다.
           </p>
-          <p className="mb-12" style={{ fontSize: '24px', lineHeight: '1.8' }}>
+          <p className="mb-6" style={{ fontSize: '16px', lineHeight: '1.6' }}>
             회원들은 국내를 넘어 글로벌 스케일의 정보와 네트워크를 접하고,
             "어떻게 시작할까"라는 질문에 가장 빠른 답을 찾을 수 있습니다.
           </p>
-          <p style={{ fontSize: '24px', lineHeight: '1.8' }}>
+          <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
             우리의 목표는 대한민국 대학 중심의 창업 생태계를
             지속적으로 성장시키고, 유망 스타트업을 배출하는 시스템을
             만들어내는 것입니다.
