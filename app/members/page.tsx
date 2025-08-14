@@ -1,5 +1,5 @@
-import MembersPage from '../components/members';
+import Members from '../components/members';
 
-export default function Members() {
-  return <MembersPage />;
+export default function MembersPage() {
+  return <Members />;
 }

@@ -4,6 +4,8 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Youth Startup Forum',
   description: 'Youth Startup Forum - Coming Soon',
+  icons: {
+    icon: '/YSFShort_Favicon.png',}
 }
 
 export default function RootLayout({

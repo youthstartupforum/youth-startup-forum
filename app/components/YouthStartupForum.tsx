@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function YouthStartupForum() {
   return (
@@ -83,7 +84,9 @@ export default function YouthStartupForum() {
             alt="YSF"
             className="h-6 w-auto"
           />
-          <span className="text-gray-500 text-xs sm:text-sm">Support</span>
+          <Link href="/support" className="text-gray-500 hover:text-gray-700 transition-colors text-xs sm:text-sm">
+            Support
+          </Link>
         </div>
         
         {/* Right Side - Social Icons */}
