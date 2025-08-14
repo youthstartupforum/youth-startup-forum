@@ -56,18 +56,18 @@ export default function YouthStartupForum() {
         {/* Vision Text */}
         <div className="max-w-3xl text-left text-gray-800 leading-relaxed">
           <p className="mb-6" style={{ fontSize: '16px', lineHeight: '1.6' }}>
-            우리는 느슨하지만 끈끈한 네트워크를 통해 전국의 학생 창업가들이
-            프로젝트를 공유하고, 정보를 교류하며,
-            창업 여정의 중요한 마일스톤을 함께 만들어갑니다.
+            Through our dynamic yet interconnected network, we unite student entrepreneurs across the nation
+            to share visionary projects, exchange transformative insights, and collaboratively forge
+            the pivotal milestones that define their entrepreneurial odyssey.
           </p>
           <p className="mb-6" style={{ fontSize: '16px', lineHeight: '1.6' }}>
-            회원들은 국내를 넘어 글로벌 스케일의 정보와 네트워크를 접하고,
-            "어떻게 시작할까"라는 질문에 가장 빠른 답을 찾을 수 있습니다.
+            Our members gain access to information and networks that transcend national boundaries,
+            reaching global scales, empowering them to discover the swiftest answers to the fundamental question:
+            "How do we begin?"
           </p>
           <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
-            우리의 목표는 대한민국 대학 중심의 창업 생태계를
-            지속적으로 성장시키고, 유망 스타트업을 배출하는 시스템을
-            만들어내는 것입니다.
+            Our mission is to cultivate a thriving entrepreneurial ecosystem centered around South Korea's universities,
+            establishing a dynamic system that continuously nurtures growth and produces the next generation of promising startups.
           </p>
         </div>
         
