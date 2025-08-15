@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
-function Members() {
+function MembersPage() {
   const [hoveredCard, setHoveredCard] = useState(null);
 
   const members = [
@@ -213,4 +213,4 @@ function Members() {
   );
 }
 
-export default Members;
+export default MembersPage;
