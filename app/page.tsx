@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import YouthStartupForum from './components/YouthStartupForum';
+import Home from './components/home';
 
 export default function Page() {
-  return <YouthStartupForum />;
+  return <Home />;
 }

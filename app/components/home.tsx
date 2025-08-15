@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function YouthStartupForum() {
+export default function Home() {
   return (
     <div className="min-h-screen bg-white flex flex-col" style={{ fontFamily: "'Wanted Sans', 'BDO Grotesk', system-ui, sans-serif" }}>
       {/* Main Content Container */}
