@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 
 function MembersPage() {
-  const [hoveredCard, setHoveredCard] = useState(null);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const members = [
     {
@@ -48,7 +48,7 @@ function MembersPage() {
     }
   ];
 
-  const handleMouseEnter = React.useCallback((cardIndex) => {
+  const handleMouseEnter = React.useCallback((cardIndex: number) => {
     setHoveredCard(cardIndex);
   }, []);
 
@@ -56,7 +56,7 @@ function MembersPage() {
     setHoveredCard(null);
   }, []);
 
-  const isCardHovered = React.useCallback((cardIndex) => {
+  const isCardHovered = React.useCallback((cardIndex: number) => {
     return hoveredCard === cardIndex;
   }, [hoveredCard]);
 
