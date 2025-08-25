@@ -9,10 +9,10 @@ function Members() {
     {
       name: 'Y-VENTURES',
       description: 'Yonsei',
-      image: 'https://placehold.co/240x234',
-      website: 'https://yventures.yonsei.ac.kr',
-      linkedin: 'https://linkedin.com/company/y-ventures',
-      instagram: 'https://instagram.com/yventures'
+      image: 'members-logo/Y-VENTURES 240x234.png',
+      website: 'https://yventures.ac',
+      linkedin: 'https://www.linkedin.com/company/yventuresyonsei/',
+      instagram: 'https://instagram.com/yventures_official'
     },
     {
       name: 'HySpark',
@@ -45,6 +45,46 @@ function Members() {
       website: 'https://blackbox.sogang.ac.kr',
       linkedin: 'https://linkedin.com/company/blackbox-sogang',
       instagram: 'https://instagram.com/blackbox_sogang'
+    },
+    {
+      name: 'SNAAC',
+      description: 'SNU',
+      image: 'https://placehold.co/240x234',
+      website: 'https://snaac.snu.ac.kr',
+      linkedin: 'https://linkedin.com/company/snaac-snu',
+      instagram: 'https://instagram.com/snaac_snu'
+    },
+    {
+      name: 'KE',
+      description: 'KAIST',
+      image: 'https://placehold.co/240x234',
+      website: 'https://ke.kaist.ac.kr',
+      linkedin: 'https://linkedin.com/company/ke-kaist',
+      instagram: 'https://instagram.com/ke_kaist'
+    },
+    {
+      name: 'Tech-Review',
+      description: 'POSTECH',
+      image: 'https://placehold.co/240x234',
+      website: 'https://techreview.postech.ac.kr',
+      linkedin: 'https://linkedin.com/company/tech-review-postech',
+      instagram: 'https://instagram.com/techreview_postech'
+    },
+    {
+      name: 'APGC-Lab',
+      description: 'POSTECH',
+      image: 'https://placehold.co/240x234',
+      website: 'https://apgclab.postech.ac.kr',
+      linkedin: 'https://linkedin.com/company/apgc-lab-postech',
+      instagram: 'https://instagram.com/apgclab_postech'
+    },
+    {
+      name: 'CEOS',
+      description: 'Sinchon area',
+      image: 'https://placehold.co/240x234',
+      website: 'https://ceos.sinchon.kr',
+      linkedin: 'https://linkedin.com/company/ceos-sinchon',
+      instagram: 'https://instagram.com/ceos_sinchon'
     }
   ];
 
