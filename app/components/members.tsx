@@ -117,6 +117,14 @@ function Members() {
       website: 'https://next.korea.kr',
       linkedin: 'https://linkedin.com/company/next-korea',
       instagram: 'https://instagram.com/next-korea'
+    },
+    {
+      name: 'MEDILUX',
+      description: 'Healthcare Undergrad',
+      image: 'https://placehold.co/240x234',
+      website: 'https://next.korea.kr',
+      linkedin: 'https://linkedin.com/company/next-korea',
+      instagram: 'https://instagram.com/next-korea'
     }
   ];
 
