@@ -23,6 +23,22 @@ function Members() {
       instagram: 'https://instagram.com/hyspark'
     },
     {
+      name: 'SNAAC',
+      description: 'SNU',
+      image: 'https://placehold.co/240x234',
+      website: 'https://snaac.snu.ac.kr',
+      linkedin: 'https://linkedin.com/company/snaac-snu',
+      instagram: 'https://instagram.com/snaac_snu'
+    },
+    {
+      name: 'VERY',
+      description: 'Yonsei', 
+      image: 'https://placehold.co/240x234',
+      website: 'https://very.yonsei.ac.kr',
+      linkedin: 'https://linkedin.com/company/very',
+      instagram: 'https://instagram.com/very'
+    },
+    {
       name: 'Flip',
       description: 'Kyunghee',
       image: 'https://placehold.co/240x234',
@@ -45,14 +61,6 @@ function Members() {
       website: 'https://blackbox.sogang.ac.kr',
       linkedin: 'https://linkedin.com/company/blackbox-sogang',
       instagram: 'https://instagram.com/blackbox_sogang'
-    },
-    {
-      name: 'SNAAC',
-      description: 'SNU',
-      image: 'https://placehold.co/240x234',
-      website: 'https://snaac.snu.ac.kr',
-      linkedin: 'https://linkedin.com/company/snaac-snu',
-      instagram: 'https://instagram.com/snaac_snu'
     },
     {
       name: 'KE',
