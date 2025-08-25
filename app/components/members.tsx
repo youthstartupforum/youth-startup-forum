@@ -8,7 +8,7 @@ function Members() {
   const members = [
     {
       name: 'Y-VENTURES',
-      description: 'Yonsei',
+      description: 'Yonsei Univ.',
       image: 'members-logo/Y-VENTURES 240x234.png',
       website: 'https://yventures.ac',
       linkedin: 'https://www.linkedin.com/company/yventuresyonsei/',
@@ -16,7 +16,7 @@ function Members() {
     },
     {
       name: 'HySpark',
-      description: 'Hanyang', 
+      description: 'Hanyang Univ.', 
       image: 'https://placehold.co/240x234',
       website: 'https://hyspark.hanyang.ac.kr',
       linkedin: 'https://linkedin.com/company/hyspark',
@@ -32,7 +32,7 @@ function Members() {
     },
     {
       name: 'VERY',
-      description: 'Yonsei', 
+      description: 'Yonsei Univ.', 
       image: 'https://placehold.co/240x234',
       website: 'https://very.yonsei.ac.kr',
       linkedin: 'https://linkedin.com/company/very',
@@ -40,7 +40,7 @@ function Members() {
     },
     {
       name: 'Flip',
-      description: 'Kyunghee',
+      description: 'Kyunghee Univ.',
       image: 'https://placehold.co/240x234',
       website: 'https://flip.khu.ac.kr',
       linkedin: 'https://linkedin.com/company/flip-khu',
@@ -56,7 +56,7 @@ function Members() {
     },
     {
       name: 'blackbox',
-      description: 'Sogang',
+      description: 'Sogang Univ.',
       image: 'https://placehold.co/240x234',
       website: 'https://blackbox.sogang.ac.kr',
       linkedin: 'https://linkedin.com/company/blackbox-sogang',
@@ -93,6 +93,30 @@ function Members() {
       website: 'https://ceos.sinchon.kr',
       linkedin: 'https://linkedin.com/company/ceos-sinchon',
       instagram: 'https://instagram.com/ceos_sinchon'
+    },
+    {
+      name: 'UNIS',
+      description: 'Ewha Univ.',
+      image: 'https://placehold.co/240x234',
+      website: 'https://unis.ewha.kr',
+      linkedin: 'https://linkedin.com/company/unis-ewha',
+      instagram: 'https://instagram.com/unis-ewha'
+    },
+    {
+      name: 'MOP',
+      description: 'GIST',
+      image: 'https://placehold.co/240x234',
+      website: 'https://mop.gist.kr',
+      linkedin: 'https://linkedin.com/company/mop-gist',
+      instagram: 'https://instagram.com/mop-gist'
+    },
+    {
+      name: 'NEXT',
+      description: 'Korea Univ.',
+      image: 'https://placehold.co/240x234',
+      website: 'https://next.korea.kr',
+      linkedin: 'https://linkedin.com/company/next-korea',
+      instagram: 'https://instagram.com/next-korea'
     }
   ];
 
