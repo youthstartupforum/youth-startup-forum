@@ -97,7 +97,7 @@ function Members() {
     {
       name: 'UNIS',
       description: 'Ewha Univ.',
-      image: 'members-logo/UNIX 240x234.png',
+      image: 'members-logo/UNIS 240x234.png',
       website: 'https://linktr.ee/unisewha?fbclid=PAZXh0bgNhZW0CMTEAAaeuQtYTat_bFMOWzBrhGY32zwNRUl2r5--U-R5F63rjH0X-QXXse90AndVGIw_aem_qfUpCsm4qQihLgsII7Shqg',
       linkedin: '',
       instagram: 'https://www.instagram.com/unis_ewha/'
