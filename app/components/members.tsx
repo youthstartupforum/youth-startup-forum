@@ -88,10 +88,10 @@ function Members() {
     },
     {
       name: 'CEOS',
-      description: 'Sinchon area',
+      description: 'Sinchon Union',
       image: 'members-logo/CEOS 240x234.png',
       website: 'https://ceos-sinchon.com/',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/company/ceos-sinchon/',
       instagram: 'https://www.instagram.com/ceos.sinchon/'
     },
     {
