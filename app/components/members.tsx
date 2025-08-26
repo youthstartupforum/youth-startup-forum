@@ -57,7 +57,7 @@ function Members() {
     {
       name: 'BLACKBOX',
       description: 'Sogang Univ.',
-      image: 'https://placehold.co/240x234',
+      image: 'members-logo/BLACKBOX 240x234.png',
       website: 'https://linktr.ee/sg.blackbox?fbclid=PAZXh0bgNhZW0CMTEAAadyI28ZHxF6A7RqcsNdYCDR8-PClzZzmL0CoEWs6O-jnztNNcmjiR7lv5RhVQ_aem_yraad-1f3FjFzK4mNvPqHgg',
       linkedin: 'https://linkedin.com/company/blackbox-sogang',
       instagram: 'https://www.instagram.com/sgublackbox/'
@@ -65,66 +65,66 @@ function Members() {
     {
       name: 'KE',
       description: 'KAIST',
-      image: 'https://placehold.co/240x234',
-      website: 'https://ke.kaist.ac.kr',
-      linkedin: 'https://linkedin.com/company/ke-kaist',
-      instagram: 'https://instagram.com/ke_kaist'
+      image: 'members-logo/KE 240x234.png',
+      website: '',
+      linkedin: 'https://www.linkedin.com/company/kaistent/',
+      instagram: 'https://www.instagram.com/kaistentrepreneurs/'
     },
     {
       name: 'Tech-Review',
       description: 'POSTECH',
-      image: 'https://placehold.co/240x234',
-      website: 'https://techreview.postech.ac.kr',
-      linkedin: 'https://linkedin.com/company/tech-review-postech',
-      instagram: 'https://instagram.com/techreview_postech'
+      image: 'members-logo/Tech-Review 240x234.png',
+      website: 'https://thirsty-rain-b58.notion.site/Tech-Review-KOR-c9f61fd115e244428f79211364c93684',
+      linkedin: 'https://www.linkedin.com/company/postech-tech-review/',
+      instagram: 'https://www.instagram.com/postech_techreview/'
     },
     {
       name: 'APGC-Lab',
       description: 'POSTECH',
-      image: 'https://placehold.co/240x234',
-      website: 'https://apgclab.postech.ac.kr',
-      linkedin: 'https://linkedin.com/company/apgc-lab-postech',
-      instagram: 'https://instagram.com/apgclab_postech'
+      image: 'members-logo/APGC-Lab 240x234.png',
+      website: 'https://linktr.ee/apgc_lab?fbclid=PAZXh0bgNhZW0CMTEAAacX6dUfZBm8CwGlUaNYBwseEzwhc8Q3b__o92T01abltKhrj4l6-Ia-BuKcaA_aem_dz-Zyf8VJ1YkZ_sLR-X0ug',
+      linkedin: '',
+      instagram: 'https://www.instagram.com/postech_apgc_lab/'
     },
     {
       name: 'CEOS',
       description: 'Sinchon area',
-      image: 'https://placehold.co/240x234',
-      website: 'https://ceos.sinchon.kr',
-      linkedin: 'https://linkedin.com/company/ceos-sinchon',
-      instagram: 'https://instagram.com/ceos_sinchon'
+      image: 'members-logo/CEOS 240x234.png',
+      website: 'https://ceos-sinchon.com/',
+      linkedin: '',
+      instagram: 'https://www.instagram.com/ceos.sinchon/'
     },
     {
       name: 'UNIS',
       description: 'Ewha Univ.',
-      image: 'https://placehold.co/240x234',
-      website: 'https://unis.ewha.kr',
-      linkedin: 'https://linkedin.com/company/unis-ewha',
-      instagram: 'https://instagram.com/unis-ewha'
+      image: 'members-logo/UNIX 240x234.png',
+      website: 'https://linktr.ee/unisewha?fbclid=PAZXh0bgNhZW0CMTEAAaeuQtYTat_bFMOWzBrhGY32zwNRUl2r5--U-R5F63rjH0X-QXXse90AndVGIw_aem_qfUpCsm4qQihLgsII7Shqg',
+      linkedin: '',
+      instagram: 'https://www.instagram.com/unis_ewha/'
     },
     {
       name: 'MOP',
       description: 'GIST',
-      image: 'https://placehold.co/240x234',
-      website: 'https://mop.gist.kr',
-      linkedin: 'https://linkedin.com/company/mop-gist',
-      instagram: 'https://instagram.com/mop-gist'
+      image: 'members-logo/MOP 240x234.png',
+      website: 'https://lumpy-cheque-04c.notion.site/?fbclid=PAZXh0bgNhZW0CMTEAAadylUt5j3TXu-7UwdgePaDPgYaEylDOj28CXBFYsTRY4OWDWpQGN06DaTn7iA_aem_OuAQB3KeTVIKA4pmdNBRFQ',
+      linkedin: '',
+      instagram: 'https://www.instagram.com/mop_gist/'
     },
     {
       name: 'NEXT',
       description: 'Korea Univ.',
-      image: 'https://placehold.co/240x234',
-      website: 'https://next.korea.kr',
-      linkedin: 'https://linkedin.com/company/next-korea',
-      instagram: 'https://instagram.com/next-korea'
+      image: 'members-logo/NEXT 240x234.png',
+      website: 'https://www.next-ku.com/home',
+      linkedin: 'https://www.linkedin.com/company/nextxlikelion/',
+      instagram: 'https://www.instagram.com/next_koreauniv/'
     },
     {
       name: 'MEDILUX',
       description: 'Healthcare Undergrad',
-      image: 'https://placehold.co/240x234',
-      website: 'https://next.korea.kr',
-      linkedin: 'https://linkedin.com/company/next-korea',
-      instagram: 'https://instagram.com/next-korea'
+      image: 'members-logo/MEDILUX 240x234.png',
+      website: 'https://medilux.notion.site/MEDILUX-OFFICIAL-8f6b28b00b274bd697d05ea4d0a9afdc?pvs=4',
+      linkedin: 'https://www.linkedin.com/company/startup-medilux/',
+      instagram: 'https://www.instagram.com/startup_medilux/'
     }
   ];
 
