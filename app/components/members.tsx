@@ -25,10 +25,10 @@ function Members() {
     {
       name: 'SNAAC',
       description: 'SNU',
-      image: 'https://placehold.co/240x234',
-      website: 'https://snaac.snu.ac.kr',
-      linkedin: 'https://linkedin.com/company/snaac-snu',
-      instagram: 'https://instagram.com/snaac_snu'
+      image: 'members-logo/SNAAC 240x234.png',
+      website: 'https://snaac.co.kr/about',
+      linkedin: 'https://www.linkedin.com/company/snusnaac/',
+      instagram: 'https://www.instagram.com/snaac_official/'
     },
     {
       name: 'VERY',
