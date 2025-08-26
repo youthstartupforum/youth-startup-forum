@@ -18,7 +18,7 @@ function Members() {
       name: 'HySpark',
       description: 'Hanyang Univ.', 
       image: 'members-logo/HySpark 240x234.png',
-      website: 'https://www.sparkfeed.co/#hero',
+      website: 'https://hyspark.career.greetinghr.com/ko/main',
       linkedin: 'https://linkedin.com/company/hyspark',
       instagram: 'https://www.instagram.com/hyspark.hanyang/'
     },
