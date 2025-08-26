@@ -17,10 +17,10 @@ function Members() {
     {
       name: 'HySpark',
       description: 'Hanyang Univ.', 
-      image: 'https://placehold.co/240x234',
-      website: 'https://hyspark.hanyang.ac.kr',
+      image: 'members-logo/HySpark 240x234.png',
+      website: 'https://www.sparkfeed.co/#hero',
       linkedin: 'https://linkedin.com/company/hyspark',
-      instagram: 'https://instagram.com/hyspark'
+      instagram: 'https://www.instagram.com/hyspark.hanyang/'
     },
     {
       name: 'SNAAC',
