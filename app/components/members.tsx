@@ -33,34 +33,34 @@ function Members() {
     {
       name: 'VERY',
       description: 'Yonsei Univ.', 
-      image: 'https://placehold.co/240x234',
-      website: 'https://very.yonsei.ac.kr',
-      linkedin: 'https://linkedin.com/company/very',
-      instagram: 'https://instagram.com/very'
+      image: 'members-logo/VERY 240x234.png',
+      website: 'https://yonseivery42.notion.site/VERY-250e016c510480ada403ff3fe35c60b3',
+      linkedin: 'https://www.linkedin.com/company/veryyonsei/',
+      instagram: 'https://www.instagram.com/very_yonsei/'
     },
     {
-      name: 'Flip',
+      name: 'FLIP',
       description: 'Kyunghee Univ.',
-      image: 'https://placehold.co/240x234',
-      website: 'https://flip.khu.ac.kr',
-      linkedin: 'https://linkedin.com/company/flip-khu',
-      instagram: 'https://instagram.com/flip_khu'
+      image: 'members-logo/FLIP 240x234.png',
+      website: 'https://lucaisfirst.notion.site/Don-t-hesitate-to-FLIP-your-life-41be3f8340f745fcba39487b83254325?pvs=4&fbclid=PAZXh0bgNhZW0CMTEAAad3Qa6Mzj5dkVi6AYoplmShAa-FPuyySTvsdq1pbjIrCST7HV1_E00Zr62gvg_aem_7bk_I_6wyRya_f_KZ-clHw',
+      linkedin: 'https://www.linkedin.com/company/khu-flip/',
+      instagram: 'https://www.instagram.com/khuflip_official/'
     },
     {
-      name: 'Insiders',
+      name: 'INSIDERS',
       description: 'Yonsei & Korea',
-      image: 'https://placehold.co/240x234',
-      website: 'https://insiders.kr',
-      linkedin: 'https://linkedin.com/company/insiders',
-      instagram: 'https://instagram.com/insiders'
+      image: 'members-logo/INSIDERS 240x234.png',
+      website: 'https://www.insiders.co.kr/',
+      linkedin: 'https://www.linkedin.com/company/insiders-mafia/',
+      instagram: 'https://www.instagram.com/insiders_mafia/'
     },
     {
-      name: 'blackbox',
+      name: 'BLACKBOX',
       description: 'Sogang Univ.',
       image: 'https://placehold.co/240x234',
-      website: 'https://blackbox.sogang.ac.kr',
+      website: 'https://linktr.ee/sg.blackbox?fbclid=PAZXh0bgNhZW0CMTEAAadyI28ZHxF6A7RqcsNdYCDR8-PClzZzmL0CoEWs6O-jnztNNcmjiR7lv5RhVQ_aem_yraad-1f3FjFzK4mNvPqHgg',
       linkedin: 'https://linkedin.com/company/blackbox-sogang',
-      instagram: 'https://instagram.com/blackbox_sogang'
+      instagram: 'https://www.instagram.com/sgublackbox/'
     },
     {
       name: 'KE',
