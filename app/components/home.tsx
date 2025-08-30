@@ -1,9 +1,74 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { createClient } from '@supabase/supabase-js';
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
+  const [user, setUser] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const router = useRouter();
+  
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://qdogjagrdciiewgjsmll.supabase.co';
+  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFkb2dqYWdyZGNpaWV3Z2pzbWxsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI5ODk3NjYsImV4cCI6MjA2ODU2NTc2Nn0.QC1W4SNbXVZb9Gzejbiu-iNKlMe97FOaXJ_C6Ng_9BM';
+  const supabase = createClient(supabaseUrl, supabaseKey);
+
+  useEffect(() => {
+    const getUser = async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      setUser(user);
+      setLoading(false);
+    };
+    getUser();
+  }, []);
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    setUser(null);
+    router.push('/');
+  };
+
   return (
     <div className="min-h-screen bg-white flex flex-col" style={{ fontFamily: "'Wanted Sans', 'BDO Grotesk', system-ui, sans-serif" }}>
+      {/* Auth Button - Top Right */}
+      <div className="absolute top-4 right-4 sm:top-6 sm:right-6 lg:top-8 lg:right-8 z-10">
+        {loading ? (
+          <div className="bg-gray-200 text-gray-400 px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base font-medium rounded-md">
+            Loading...
+          </div>
+        ) : user ? (
+          <button
+            onClick={handleLogout}
+            className="bg-black text-white px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base font-medium rounded-md hover:bg-gray-800 transition-all duration-200 shadow-md hover:shadow-lg"
+            style={{
+              backgroundColor: '#000000',
+              color: '#ffffff',
+              borderRadius: '6px',
+              border: 'none',
+              cursor: 'pointer',
+              fontWeight: '500'
+            }}
+          >
+            Logout
+          </button>
+        ) : (
+          <Link
+            href="/login"
+            className="bg-black text-white px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base font-medium rounded-md hover:bg-gray-800 transition-all duration-200 shadow-md hover:shadow-lg"
+            style={{
+              backgroundColor: '#000000',
+              color: '#ffffff',
+              borderRadius: '6px',
+              textDecoration: 'none',
+              fontWeight: '500'
+            }}
+          >
+            Login
+          </Link>
+        )}
+      </div>
+      
       {/* Main Content Container */}
       <div 
         className="flex-1 flex flex-col items-center px-4 sm:px-8 lg:px-16"

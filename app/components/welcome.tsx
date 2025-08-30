@@ -93,7 +93,7 @@ export default function Welcome() {
             e.currentTarget.style.backgroundColor = '#000000';
           }}
         >
-          Sign Out
+          Logout
         </button>
       </div>
 
