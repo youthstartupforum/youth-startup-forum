@@ -90,19 +90,22 @@ export default function Home() {
         
         {/* Navigation Buttons */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 w-full max-w-xs sm:max-w-md md:max-w-lg justify-center items-center mb-6">
-          <button 
-            className="bg-black text-white px-4 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 text-sm sm:text-base md:text-lg font-medium rounded-md sm:rounded-lg hover:bg-gray-800 hover:scale-105 transition-all duration-200 w-full sm:w-auto shadow-md hover:shadow-lg"
+          <a
+            href="https://tally.so/r/mO6kqK"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-black text-white px-4 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 text-sm sm:text-base md:text-lg font-medium rounded-md sm:rounded-lg hover:bg-gray-800 hover:scale-105 transition-all duration-200 w-full sm:w-auto shadow-md hover:shadow-lg inline-block text-center no-underline"
             style={{
               backgroundColor: '#000000',
               color: '#ffffff',
               borderRadius: '6px',
-              border: 'none',
               cursor: 'pointer',
-              fontWeight: '500'
+              fontWeight: '500',
+              textDecoration: 'none'
             }}
           >
             Join us
-          </button>
+          </a>
           <a
             href="https://youthstartupforum.com/members"
             className="bg-gray-100 text-black px-4 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 text-sm sm:text-base md:text-lg font-medium rounded-md sm:rounded-lg hover:bg-gray-200 hover:scale-105 transition-all duration-200 w-full sm:w-auto shadow-md hover:shadow-lg inline-block text-center no-underline"
