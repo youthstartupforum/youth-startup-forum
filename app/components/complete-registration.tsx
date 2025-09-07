@@ -72,14 +72,8 @@ export default function CompleteRegistration() {
           return;
         }
 
-        // Check if user already completed registration
-        const { data: profile } = await supabase
-          .from('user_profiles')
-          .select('*')
-          .eq('user_id', user.id)
-          .single();
-
-        if (profile?.registration_completed) {
+        // Check if user already completed registration using metadata
+        if (user.user_metadata?.registration_completed) {
           router.push('/welcome');
           return;
         }
@@ -214,20 +208,18 @@ const handleSubmit = async (e: React.FormEvent) => {
 
     const finalInstitution = formData.institution === 'Other' ? formData.customInstitution : formData.institution;
 
-    // Create or update user profile
-    const { error } = await supabase
-      .from('user_profiles')
-      .upsert({
-        user_id: user.id,
+    // Update user metadata instead of using database table
+    const { error } = await supabase.auth.updateUser({
+      data: {
         first_name: formData.firstName,
         last_name: formData.lastName,
         institution: finalInstitution,
         registration_completed: true,
         terms_accepted_at: new Date().toISOString(),
         privacy_accepted_at: new Date().toISOString(),
-        registration_method: 'google',
-        created_at: new Date().toISOString()
-      });
+        registration_method: 'google'
+      }
+    });
 
     if (error) throw error;
 
