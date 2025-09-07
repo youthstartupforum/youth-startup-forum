@@ -35,6 +35,20 @@ export default function Welcome() {
     router.push('/');
   };
 
+  const handleProfileClick = () => {
+    router.push('/profile');
+  };
+
+  const getDisplayName = (user: any) => {
+    if (user?.user_metadata?.first_name) {
+      return user.user_metadata.first_name;
+    }
+    if (user?.email) {
+      return user.email.split('@')[0];
+    }
+    return 'User';
+  };
+
   if (loading) {
     return (
       <div style={{ 
@@ -73,28 +87,44 @@ export default function Welcome() {
             style={{ height: '40px', cursor: 'pointer' }}
           />
         </Link>
-        <button
-          onClick={handleSignOut}
-          style={{
-            backgroundColor: '#000000',
-            color: 'white',
-            padding: '8px 16px',
-            borderRadius: '6px',
-            border: 'none',
-            cursor: 'pointer',
-            fontWeight: '500',
-            fontSize: '14px',
-            transition: 'all 0.2s'
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = '#1f1f1f';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = '#000000';
-          }}
-        >
-          Logout
-        </button>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <button
+            onClick={handleProfileClick}
+            style={{
+              background: 'none',
+              border: 'none',
+              fontWeight: '500',
+              textDecoration: 'underline',
+              cursor: 'pointer',
+              fontSize: '14px',
+              color: '#000000'
+            }}
+          >
+            {getDisplayName(user)}
+          </button>
+          <button
+            onClick={handleSignOut}
+            style={{
+              backgroundColor: '#000000',
+              color: 'white',
+              padding: '8px 16px',
+              borderRadius: '6px',
+              border: 'none',
+              cursor: 'pointer',
+              fontWeight: '500',
+              fontSize: '14px',
+              transition: 'all 0.2s'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#1f1f1f';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = '#000000';
+            }}
+          >
+            Logout
+          </button>
+        </div>
       </div>
 
       {/* Main Content */}

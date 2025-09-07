@@ -9,11 +9,24 @@ export async function GET(request: Request) {
 
   if (code) {
     const supabase = createRouteHandlerClient({ cookies })
-    const { data } = await supabase.auth.exchangeCodeForSession(code)
+    const { data, error } = await supabase.auth.exchangeCodeForSession(code)
     
-    // Check if this is a new user (signup) by checking if user was just created
-    if (data.user && isSignup) {
-      return NextResponse.redirect(`${requestUrl.origin}/welcome`)
+    if (error) {
+      console.error('Auth callback error:', error)
+      return NextResponse.redirect(`${requestUrl.origin}/login`)
+    }
+
+    // For Google OAuth, check if this is marked as signup or check user creation time
+    if (data.user) {
+      const userCreatedAt = new Date(data.user.created_at)
+      const now = new Date()
+      const timeDiff = now.getTime() - userCreatedAt.getTime()
+      const isNewUser = timeDiff < 10000 // User created within last 10 seconds
+
+      // If explicitly marked as signup OR user was just created, go to welcome
+      if (isSignup || isNewUser) {
+        return NextResponse.redirect(`${requestUrl.origin}/welcome`)
+      }
     }
   }
 

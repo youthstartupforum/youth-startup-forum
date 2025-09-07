@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { createClient } from '@supabase/supabase-js';
 import { useRouter } from 'next/navigation';
 
-export default function MembersComingSoon() {
+export default function Profile() {
   const [user, setUser] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
@@ -17,11 +17,15 @@ export default function MembersComingSoon() {
   useEffect(() => {
     const getUser = async () => {
       const { data: { user } } = await supabase.auth.getUser();
+      if (!user) {
+        router.push('/login');
+        return;
+      }
       setUser(user);
       setLoading(false);
     };
     getUser();
-  }, []);
+  }, [router, supabase]);
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
@@ -43,15 +47,36 @@ export default function MembersComingSoon() {
     return 'User';
   };
 
+  const getFullName = (user: any) => {
+    const firstName = user?.user_metadata?.first_name || '';
+    const lastName = user?.user_metadata?.last_name || '';
+    if (firstName && lastName) {
+      return `${firstName} ${lastName}`;
+    }
+    if (firstName) return firstName;
+    if (user?.email) return user.email.split('@')[0];
+    return 'User';
+  };
+
+  if (loading) {
+    return (
+      <div style={{ 
+        minHeight: '100vh', 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'center',
+        fontFamily: "'Wanted Sans', 'BDO Grotesk', system-ui, sans-serif"
+      }}>
+        <p style={{ fontSize: '18px', color: '#6b7280' }}>Loading...</p>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-white flex flex-col" style={{ fontFamily: "'Wanted Sans', 'BDO Grotesk', system-ui, sans-serif" }}>
       {/* Auth Button - Top Right */}
       <div className="absolute top-4 right-4 sm:top-6 sm:right-6 lg:top-8 lg:right-8 z-10">
-        {loading ? (
-          <div className="bg-gray-200 text-gray-400 px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base font-medium rounded-md">
-            Loading...
-          </div>
-        ) : user ? (
+        {user ? (
           <div className="flex items-center gap-3">
             <button
               onClick={handleProfileClick}
@@ -96,11 +121,12 @@ export default function MembersComingSoon() {
           </Link>
         )}
       </div>
+      
       {/* Main Content Container */}
       <div 
         className="flex-1 flex flex-col items-center px-4 sm:px-8 lg:px-16"
         style={{
-          paddingTop: '160px',
+          paddingTop: '120px',
           paddingBottom: '40px',
           paddingLeft: '32px',
           paddingRight: '32px',
@@ -109,25 +135,200 @@ export default function MembersComingSoon() {
       >
         
         {/* Logo */}
-        <a href="https://youthstartupforum.com">
+        <Link href="/">
           <img 
             src="/YSFMain.svg" 
             alt="Youth Startup Forum" 
-            className="h-12 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-auto mb-6"
+            className="h-12 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-auto mb-6 cursor-pointer hover:scale-105 transition-all duration-200"
           />
-        </a>
+        </Link>
         
-        {/* Spacer */}
-        <div className="flex-1 flex items-center justify-center">
-          {/* Coming Soon Text */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-800 text-center">
-            Coming Soon
-          </h1>
+        {/* Profile Content */}
+        <div className="w-full max-w-2xl">
+          <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+            <h1 style={{ 
+              fontSize: '48px', 
+              fontWeight: '500', 
+              color: '#1f2937', 
+              marginBottom: '16px',
+              margin: '0 0 16px 0'
+            }}>
+              Profile
+            </h1>
+            <p style={{ 
+              color: '#6b7280', 
+              fontSize: '16px', 
+              lineHeight: '1.6',
+              margin: 0
+            }}>
+              Manage your Youth Startup Forum account
+            </p>
+          </div>
+          
+          {/* Profile Information */}
+          <div style={{
+            backgroundColor: '#f9fafb',
+            border: '1px solid #e5e7eb',
+            borderRadius: '12px',
+            padding: '32px',
+            marginBottom: '32px'
+          }}>
+            <h2 style={{
+              fontSize: '24px',
+              fontWeight: '500',
+              color: '#1f2937',
+              marginBottom: '24px',
+              margin: '0 0 24px 0'
+            }}>
+              Account Information
+            </h2>
+            
+            <div style={{ marginBottom: '24px' }}>
+              <label style={{
+                display: 'block',
+                fontSize: '16px',
+                fontWeight: '500',
+                color: '#374151',
+                marginBottom: '8px'
+              }}>
+                Full Name
+              </label>
+              <p style={{
+                fontSize: '16px',
+                color: '#6b7280',
+                margin: 0,
+                padding: '12px',
+                backgroundColor: '#ffffff',
+                border: '1px solid #d1d5db',
+                borderRadius: '8px'
+              }}>
+                {getFullName(user)}
+              </p>
+            </div>
+            
+            <div style={{ marginBottom: '24px' }}>
+              <label style={{
+                display: 'block',
+                fontSize: '16px',
+                fontWeight: '500',
+                color: '#374151',
+                marginBottom: '8px'
+              }}>
+                Email Address
+              </label>
+              <p style={{
+                fontSize: '16px',
+                color: '#6b7280',
+                margin: 0,
+                padding: '12px',
+                backgroundColor: '#ffffff',
+                border: '1px solid #d1d5db',
+                borderRadius: '8px'
+              }}>
+                {user?.email || 'No email provided'}
+              </p>
+            </div>
+            
+            {user?.user_metadata?.institution && (
+              <div style={{ marginBottom: '24px' }}>
+                <label style={{
+                  display: 'block',
+                  fontSize: '16px',
+                  fontWeight: '500',
+                  color: '#374151',
+                  marginBottom: '8px'
+                }}>
+                  Institution
+                </label>
+                <p style={{
+                  fontSize: '16px',
+                  color: '#6b7280',
+                  margin: 0,
+                  padding: '12px',
+                  backgroundColor: '#ffffff',
+                  border: '1px solid #d1d5db',
+                  borderRadius: '8px'
+                }}>
+                  {user.user_metadata.institution}
+                </p>
+              </div>
+            )}
+            
+            <div>
+              <label style={{
+                display: 'block',
+                fontSize: '16px',
+                fontWeight: '500',
+                color: '#374151',
+                marginBottom: '8px'
+              }}>
+                Member Since
+              </label>
+              <p style={{
+                fontSize: '16px',
+                color: '#6b7280',
+                margin: 0,
+                padding: '12px',
+                backgroundColor: '#ffffff',
+                border: '1px solid #d1d5db',
+                borderRadius: '8px'
+              }}>
+                {new Date(user?.created_at).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                })}
+              </p>
+            </div>
+          </div>
+          
+          {/* Navigation Buttons */}
+          <div style={{ 
+            display: 'flex', 
+            gap: '16px', 
+            justifyContent: 'center',
+            flexWrap: 'wrap'
+          }}>
+            <Link
+              href="/"
+              style={{
+                backgroundColor: '#000000',
+                color: '#ffffff',
+                padding: '12px 24px',
+                borderRadius: '8px',
+                textDecoration: 'none',
+                fontWeight: '500',
+                fontSize: '16px',
+                transition: 'all 0.2s',
+                display: 'inline-block'
+              }}
+            >
+              Back to Home
+            </Link>
+            
+            <Link
+              href="/members"
+              style={{
+                backgroundColor: '#f3f4f6',
+                color: '#000000',
+                padding: '12px 24px',
+                borderRadius: '8px',
+                textDecoration: 'none',
+                fontWeight: '500',
+                fontSize: '16px',
+                transition: 'all 0.2s',
+                display: 'inline-block',
+                border: '1px solid #d1d5db'
+              }}
+            >
+              View Members
+            </Link>
+          </div>
         </div>
         
       </div>
       
-      {/* Footer - Updated to match main page */}
+      {/* Footer */}
       <footer className="flex flex-col sm:flex-row justify-between items-center gap-4 px-4 sm:px-8 lg:px-16 py-6 sm:py-8 w-full max-w-7xl mx-auto">
         
         {/* Left Side - YSF Support */}

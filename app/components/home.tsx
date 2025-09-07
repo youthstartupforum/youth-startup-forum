@@ -29,6 +29,20 @@ export default function Home() {
     router.push('/');
   };
 
+  const handleProfileClick = () => {
+    router.push('/profile');
+  };
+
+  const getDisplayName = (user: any) => {
+    if (user?.user_metadata?.first_name) {
+      return user.user_metadata.first_name;
+    }
+    if (user?.email) {
+      return user.email.split('@')[0];
+    }
+    return 'User';
+  };
+
   return (
     <div className="min-h-screen bg-white flex flex-col" style={{ fontFamily: "'Wanted Sans', 'BDO Grotesk', system-ui, sans-serif" }}>
       {/* Auth Button - Top Right */}
@@ -38,20 +52,34 @@ export default function Home() {
             Loading...
           </div>
         ) : user ? (
-          <button
-            onClick={handleLogout}
-            className="bg-black text-white px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base font-medium rounded-md hover:bg-gray-800 transition-all duration-200 shadow-md hover:shadow-lg"
-            style={{
-              backgroundColor: '#000000',
-              color: '#ffffff',
-              borderRadius: '6px',
-              border: 'none',
-              cursor: 'pointer',
-              fontWeight: '500'
-            }}
-          >
-            Logout
-          </button>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={handleProfileClick}
+              className="text-black hover:text-gray-600 transition-colors duration-200 text-sm sm:text-base font-medium cursor-pointer"
+              style={{
+                background: 'none',
+                border: 'none',
+                fontWeight: '500',
+                textDecoration: 'underline'
+              }}
+            >
+              {getDisplayName(user)}
+            </button>
+            <button
+              onClick={handleLogout}
+              className="bg-black text-white px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base font-medium rounded-md hover:bg-gray-800 transition-all duration-200 shadow-md hover:shadow-lg"
+              style={{
+                backgroundColor: '#000000',
+                color: '#ffffff',
+                borderRadius: '6px',
+                border: 'none',
+                cursor: 'pointer',
+                fontWeight: '500'
+              }}
+            >
+              Logout
+            </button>
+          </div>
         ) : (
           <Link
             href="/login"
