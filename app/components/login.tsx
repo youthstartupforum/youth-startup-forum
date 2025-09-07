@@ -119,8 +119,8 @@ export default function LoginPage() {
           form: error.message
         }));
       } else {
-        // Login successful - redirect to dashboard
-        router.push('/welcome');
+        // Login successful - redirect to home page
+        router.push('/');
       }
     } catch (error) {
       setErrors(prev => ({
@@ -229,7 +229,7 @@ export default function LoginPage() {
                 const { data, error } = await supabase.auth.signInWithOAuth({
                   provider: 'google',
                   options: {
-                    redirectTo: `${window.location.origin}/dashboard`
+                    redirectTo: `${window.location.origin}/auth/callback`
                   }
                 });
                 

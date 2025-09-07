@@ -158,7 +158,7 @@ export default function RegisterPage() {
         }));
       } else {
         alert('Registration successful! Please check your email to verify your account.');
-        router.push('/login');
+        router.push('/welcome');
       }
     } catch (error) {
       setErrors(prev => ({
@@ -272,7 +272,7 @@ export default function RegisterPage() {
                 const { data, error } = await supabase.auth.signInWithOAuth({
                   provider: 'google',
                   options: {
-                    redirectTo: `${window.location.origin}/welcome`
+                    redirectTo: `${window.location.origin}/auth/callback?signup=true`
                   }
                 });
                 
